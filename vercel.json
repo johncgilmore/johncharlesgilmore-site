@@ -4,6 +4,10 @@
     {
       "src": "*.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "*.{jpg,jpeg,png,gif}",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
