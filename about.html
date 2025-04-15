@@ -77,6 +77,38 @@
       line-height: 1.6;
       margin-bottom: 30px;
     }
+    .principle-link {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    .principle-link:hover {
+      text-decoration: underline;
+    }
+    .principle-section {
+      display: none;
+      margin: 40px 0;
+      padding: 30px;
+      background-color: #F8F9FA;
+      border-radius: 12px;
+      border-left: 4px solid #FFE365;
+    }
+    .principle-section.active {
+      display: block;
+    }
+    .principle-section h3 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #000;
+    }
+    .principle-section p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
@@ -96,11 +128,62 @@
     <p>After fifteen years leading operations in high-growth startups, I specialize in building systems that scale with the founder—not around them. 
     My work spans finance, people, legal, product, and revenue ops—and I'm most useful when a company feels stuck and no one can say exactly why.</p>
     
-    <p>I'm driven by five core principles: <span class="highlight">Protect your ability to see</span>, <span class="highlight">embody error correction</span>, 
-    <span class="highlight">prioritize systems over sentiment</span>, <span class="highlight">depend on others to sharpen your thinking</span>, and 
-    <span class="highlight">accept that slow is fast</span>. These values guide how I diagnose hidden bottlenecks and create execution systems that hold up under pressure.</p>
+    <p>I'm driven by five core principles: 
+      <a href="#principle-see" class="principle-link highlight" onclick="togglePrinciple('see')">Protect your ability to see</a>, 
+      <a href="#principle-error" class="principle-link highlight" onclick="togglePrinciple('error')">embody error correction</a>, 
+      <a href="#principle-systems" class="principle-link highlight" onclick="togglePrinciple('systems')">prioritize systems over sentiment</a>, 
+      <a href="#principle-thinking" class="principle-link highlight" onclick="togglePrinciple('thinking')">depend on others to sharpen your thinking</a>, and 
+      <a href="#principle-slow" class="principle-link highlight" onclick="togglePrinciple('slow')">accept that slow is fast</a>. 
+    These values guide how I diagnose hidden bottlenecks and create execution systems that hold up under pressure.</p>
     
     <p>If you're building something fast—and it's already outgrowing your team, systems, or clarity—I'll help you catch up to your own vision.</p>
+
+    <div id="principle-see" class="principle-section">
+      <h3>Protect Your Ability to See</h3>
+      <p>In fast-moving organizations, clarity is your most valuable asset. I help you build systems that maintain visibility into what's really happening, even as you scale. This means creating feedback loops, establishing clear metrics, and ensuring you have the right data to make informed decisions.</p>
+      <p>When you can see clearly, you can act decisively. This principle is about maintaining operational clarity at every level of your organization.</p>
+    </div>
+
+    <div id="principle-error" class="principle-section">
+      <h3>Embody Error Correction</h3>
+      <p>Growth requires learning, and learning requires embracing errors as opportunities. I help you build systems that make errors visible, analyzable, and actionable. This isn't about avoiding mistakes—it's about making them productive.</p>
+      <p>When errors become data points rather than failures, your organization can iterate and improve at unprecedented speed.</p>
+    </div>
+
+    <div id="principle-systems" class="principle-section">
+      <h3>Prioritize Systems Over Sentiment</h3>
+      <p>While culture and team dynamics matter, they need to be supported by robust systems. I help you build operational frameworks that align incentives, clarify responsibilities, and create predictable outcomes.</p>
+      <p>Good systems make good behavior easy and bad behavior hard. They're the foundation of sustainable growth.</p>
+    </div>
+
+    <div id="principle-thinking" class="principle-section">
+      <h3>Depend on Others to Sharpen Your Thinking</h3>
+      <p>No leader has all the answers. I help you build feedback mechanisms and decision frameworks that leverage your team's collective intelligence. This means creating spaces for constructive dissent and ensuring diverse perspectives inform your strategy.</p>
+      <p>When you tap into your team's collective wisdom, you make better decisions and build stronger buy-in.</p>
+    </div>
+
+    <div id="principle-slow" class="principle-section">
+      <h3>Accept That Slow is Fast</h3>
+      <p>Rushing to solutions often creates more problems than it solves. I help you build systems that prioritize thorough understanding and careful implementation over quick fixes. This means taking time to diagnose root causes and design sustainable solutions.</p>
+      <p>When you invest in doing things right the first time, you avoid the costly rework that often comes from rushing.</p>
+    </div>
   </div>
+
+  <script>
+    function togglePrinciple(id) {
+      event.preventDefault();
+      const section = document.getElementById('principle-' + id);
+      const allSections = document.querySelectorAll('.principle-section');
+      
+      // Close all sections
+      allSections.forEach(s => s.classList.remove('active'));
+      
+      // Open the clicked section
+      section.classList.add('active');
+      
+      // Smooth scroll to the section
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
