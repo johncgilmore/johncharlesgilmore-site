@@ -12,6 +12,21 @@
   ],
   "routes": [
     {
+      "src": "/about.html",
+      "status": 308,
+      "headers": { "Location": "/about" }
+    },
+    {
+      "src": "/schedule.html",
+      "status": 308,
+      "headers": { "Location": "/schedule" }
+    },
+    {
+      "src": "/index.html",
+      "status": 308,
+      "headers": { "Location": "/" }
+    },
+    {
       "src": "/about",
       "dest": "/about.html"
     },
