@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About John Charles Gilmore</title>
+  <title>John Charles Gilmore | About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      padding: 40px;
-      max-width: 800px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #fff;
+      color: #333;
+      padding: 40px 20px;
+      max-width: 1100px;
       margin: auto;
       line-height: 1.6;
+      font-size: 16px;
     }
     nav {
       margin-bottom: 30px;
@@ -22,12 +25,47 @@
       color: #006FDE;
     }
     h1 {
-      font-size: 2.4em;
+      font-size: 3em;
+      font-weight: 700;
+      color: #000;
+      line-height: 1.2;
       margin-bottom: 20px;
     }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
+    h2 {
+      font-size: 2.6em;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      line-height: 1.3;
+      max-width: 900px;
+      color: #000;
+      font-weight: 700;
+    }
+    .highlight {
+      background-color: #FFE365;
+      padding: 2px 4px;
+      font-weight: 700;
+    }
+    .hero {
+      background-color: #F0ECDD;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 12px;
+      margin-bottom: 80px;
+    }
+    .hero-statement {
+      font-size: 24px;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    .content-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .content-section p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 30px;
     }
   </style>
 </head>
@@ -38,16 +76,20 @@
     <a href="schedule.html">Schedule</a>
   </nav>
 
-  <h1>About John Charles Gilmore</h1>
+  <div class="hero">
+    <h1>About <span class="highlight">John Charles Gilmore</span></h1>
+    <p class="hero-statement">Fractional COO and startup builder with a bias toward clarity, acceleration, and radical operational honesty.</p>
+  </div>
 
-  <p>I'm John Gilmore, a Fractional COO and startup builder with a bias toward clarity, acceleration, and radical operational honesty. 
-  After fifteen years leading operations in high-growth startups, I specialize in building systems that scale with the founder—not around them. 
-  My work spans finance, people, legal, product, and revenue ops—and I’m most useful when a company feels stuck and no one can say exactly why.</p>
-  
-  <p>I'm driven by five core principles: Protect your ability to see, embody error correction, prioritize systems over sentiment, depend on others to sharpen your thinking, and accept that slow is fast. 
-  These values guide how I diagnose hidden bottlenecks and create execution systems that hold up under pressure.</p>
-  
-  <p>If you’re building something fast—and it’s already outgrowing your team, systems, or clarity—I’ll help you catch up to your own vision.</p>
-
+  <div class="content-section">
+    <p>After fifteen years leading operations in high-growth startups, I specialize in building systems that scale with the founder—not around them. 
+    My work spans finance, people, legal, product, and revenue ops—and I'm most useful when a company feels stuck and no one can say exactly why.</p>
+    
+    <p>I'm driven by five core principles: <span class="highlight">Protect your ability to see</span>, <span class="highlight">embody error correction</span>, 
+    <span class="highlight">prioritize systems over sentiment</span>, <span class="highlight">depend on others to sharpen your thinking</span>, and 
+    <span class="highlight">accept that slow is fast</span>. These values guide how I diagnose hidden bottlenecks and create execution systems that hold up under pressure.</p>
+    
+    <p>If you're building something fast—and it's already outgrowing your team, systems, or clarity—I'll help you catch up to your own vision.</p>
+  </div>
 </body>
 </html>
